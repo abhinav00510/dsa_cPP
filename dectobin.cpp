@@ -2,7 +2,9 @@
 using namespace std;
 
 int dectobin(int num){
-    int ans = 0, pow = 1;
+    int ans = 0; 
+    int pow = 1;
+
     while(num>0){
         int rem = num%2;
         num = num/2;
