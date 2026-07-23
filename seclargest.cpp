@@ -5,25 +5,24 @@ using namespace std;
 int newarray(vector<int>nums){
 
     int largest = nums.at(0);
-    int index = 0;
+    // int index = 0;
 
     for(int i = 1; i<nums.size(); i++){
         if(largest<nums[i]){
             largest = nums[i];
-            index = i;
+            // index = i;
         }
     }
 
-    nums.erase(nums.begin()+index);
+    // int mini = INT8_MIN;
+    int seclargest = INT8_MIN;
 
-    int seclargest = nums.at(0);
-
-    for(int i = 1; i<nums.size(); i++){
-        if(seclargest<nums[i]){
+    for(int i = 0; i<nums.size(); i++){
+        if(nums[i]>seclargest && nums[i]<largest){
             seclargest = nums[i];
         }
     }
-
+    
     return seclargest;
 }
 
